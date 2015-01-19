@@ -44,12 +44,12 @@ void setup() {
 
 void draw() {
     frame.setTitle(int(frameRate) + " fps");
-	background(200);
 	drawBackground();
 	drawPosters();
 }
 
 void drawBackground() {
+	background(200);
 	image(oBackground, 0, 0, width, height);
 }
 
