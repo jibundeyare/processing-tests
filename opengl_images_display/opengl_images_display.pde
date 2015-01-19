@@ -45,9 +45,15 @@ void setup() {
 void draw() {
     frame.setTitle(int(frameRate) + " fps");
 	background(200);
+	drawBackground();
+	drawPosters();
+}
 
+void drawBackground() {
 	image(oBackground, 0, 0, width, height);
+}
 
+void drawPosters() {
 	int iIndex;
 
 	for (iIndex = 0; iIndex < aPosters.length; iIndex++) {
