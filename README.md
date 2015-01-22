@@ -14,3 +14,7 @@ This sketch tests the frame rate when displaying mutilple images using opengl.
 
 This sketch tests the drawing of strip that follows the mouse.
 
+## translate_draw_shape
+
+This sketch tests the drawing of a quad around a given coordinate using `translate()`
+
