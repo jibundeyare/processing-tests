@@ -16,7 +16,7 @@ void draw() {
 
 void mouseDragged() {
 	drawMouseVector();
-	drawRibbon();
+	drawStrip();
 }
 
 void setPreviousMousePosition() {
@@ -35,7 +35,7 @@ void drawMouseVector() {
 	ellipse(mouseX, mouseY, 5, 5);
 }
 
-void drawRibbon() {
+void drawStrip() {
 	PVector oMouseVector = getMouseVector();
 
 	/* bottom left */
