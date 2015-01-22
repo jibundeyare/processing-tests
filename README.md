@@ -10,3 +10,7 @@ This sketch tests the mask feature of the PImage class
 
 This sketch tests the frame rate when displaying mutilple images using opengl.
 
+## strip
+
+This sketch tests the drawing of strip that follows the mouse.
+
