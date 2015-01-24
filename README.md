@@ -6,6 +6,10 @@ This contains test sketches for processing.
 
 This sketch tests the mask feature of the PImage class
 
+## on_mouse_event
+
+This sketch tests the order in which mouse events atre triggered
+
 ## opengl_images_display
 
 This sketch tests the frame rate when displaying mutilple images using opengl.
