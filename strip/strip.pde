@@ -4,13 +4,11 @@
  */
 
 PGraphics oCanvas;
-PVector oPMousePosition = new PVector();
 int iHalfWidth = 5;
 
 void setup() {
 	size(800, 600, P3D);
 	oCanvas = createGraphics(width, height);
-	resetPMousePosition();
 }
 
 void draw() {
@@ -19,32 +17,12 @@ void draw() {
 	image(oCanvas, 0, 0);
 }
 
-void mousePressed() {
-	setPMousePosition();
-}
-
-void mouseReleased() {
-	resetPMousePosition();
-}
-
 void mouseDragged() {
 	drawStrip();
-	/* drawMouseVector(); */
-	setPMousePosition();
-}
-
-void setPMousePosition() {
-	oPMousePosition.x = mouseX;
-	oPMousePosition.y = mouseY;
-}
-
-void resetPMousePosition() {
-	oPMousePosition.x = -1;
-	oPMousePosition.y = -1;
 }
 
 PVector getMouseVector() {
-	return new PVector(mouseX - oPMousePosition.x, mouseY - oPMousePosition.y);
+	return new PVector(mouseX - pmouseX, mouseY - pmouseY);
 }
 
 void drawStrip() {
@@ -52,7 +30,7 @@ void drawStrip() {
 
 	oCanvas.beginDraw();
 	oCanvas.pushMatrix();
-	oCanvas.translate(oPMousePosition.x, oPMousePosition.y);
+	oCanvas.translate(pmouseX, pmouseY);
 	oCanvas.rotate(oMouseVector.heading());
 	oCanvas.noStroke();
 	oCanvas.fill(255);
@@ -69,17 +47,6 @@ void drawStrip() {
 	oCanvas.endShape(CLOSE);
 
 	oCanvas.popMatrix();
-	oCanvas.endDraw();
-}
-
-void drawMouseVector() {
-	oCanvas.beginDraw();
-	oCanvas.stroke(0);
-	oCanvas.noFill();
-	oCanvas.line(oPMousePosition.x, oPMousePosition.y, mouseX, mouseY);
-	oCanvas.noStroke();
-	oCanvas.fill(0);
-	oCanvas.ellipse(mouseX, mouseY, 5, 5);
 	oCanvas.endDraw();
 }
 
