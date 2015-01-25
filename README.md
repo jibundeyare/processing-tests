@@ -2,6 +2,10 @@
 
 This contains test sketches for processing.
 
+## draw_mouse_vector
+
+This sketch tests how to use `mouseX`, `mouseY`, `pmouseX` and `pmouseY` to draw a vector of the mouse movements
+
 ## image_mask
 
 This sketch tests the mask feature of the PImage class
