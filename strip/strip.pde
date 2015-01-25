@@ -4,12 +4,13 @@
  */
 
 PGraphics oCanvas;
-PVector oPreviousMousePosition = new PVector();
+PVector oPMousePosition = new PVector();
 int iHalfWidth = 5;
 
 void setup() {
 	size(800, 600, P3D);
 	oCanvas = createGraphics(width, height);
+	resetPMousePosition();
 }
 
 void draw() {
@@ -19,33 +20,31 @@ void draw() {
 }
 
 void mousePressed() {
-	setPreviousMousePosition();
+	setPMousePosition();
+}
+
+void mouseReleased() {
+	resetPMousePosition();
 }
 
 void mouseDragged() {
 	drawStrip();
-	setPreviousMousePosition();
 	/* drawMouseVector(); */
+	setPMousePosition();
+}
+
+void setPMousePosition() {
+	oPMousePosition.x = mouseX;
+	oPMousePosition.y = mouseY;
+}
+
+void resetPMousePosition() {
+	oPMousePosition.x = -1;
+	oPMousePosition.y = -1;
 }
 
 PVector getMouseVector() {
-	return new PVector(mouseX - oPreviousMousePosition.x, mouseY - oPreviousMousePosition.y);
-}
-
-void setPreviousMousePosition() {
-	oPreviousMousePosition.x = mouseX;
-	oPreviousMousePosition.y = mouseY;
-}
-
-void drawMouseVector() {
-	oCanvas.beginDraw();
-	oCanvas.stroke(0);
-	oCanvas.noFill();
-	oCanvas.line(oPreviousMousePosition.x, oPreviousMousePosition.y, mouseX, mouseY);
-	oCanvas.noStroke();
-	oCanvas.fill(0);
-	oCanvas.ellipse(mouseX, mouseY, 5, 5);
-	oCanvas.endDraw();
+	return new PVector(mouseX - oPMousePosition.x, mouseY - oPMousePosition.y);
 }
 
 void drawStrip() {
@@ -53,7 +52,7 @@ void drawStrip() {
 
 	oCanvas.beginDraw();
 	oCanvas.pushMatrix();
-	oCanvas.translate(oPreviousMousePosition.x, oPreviousMousePosition.y);
+	oCanvas.translate(oPMousePosition.x, oPMousePosition.y);
 	oCanvas.rotate(oMouseVector.heading());
 	oCanvas.noStroke();
 	oCanvas.fill(255);
@@ -70,6 +69,17 @@ void drawStrip() {
 	oCanvas.endShape(CLOSE);
 
 	oCanvas.popMatrix();
+	oCanvas.endDraw();
+}
+
+void drawMouseVector() {
+	oCanvas.beginDraw();
+	oCanvas.stroke(0);
+	oCanvas.noFill();
+	oCanvas.line(oPMousePosition.x, oPMousePosition.y, mouseX, mouseY);
+	oCanvas.noStroke();
+	oCanvas.fill(0);
+	oCanvas.ellipse(mouseX, mouseY, 5, 5);
 	oCanvas.endDraw();
 }
 
