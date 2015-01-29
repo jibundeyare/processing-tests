@@ -21,8 +21,20 @@ void mouseDragged() {
 	drawStrip();
 }
 
+void keyPressed() {
+	if (key == ' ') {
+		clearCanvas();
+	}
+}
+
 PVector getMouseVector() {
 	return new PVector(mouseX - pmouseX, mouseY - pmouseY);
+}
+
+void clearCanvas() {
+	oCanvas.clear();
+	oCanvas.beginDraw();
+	oCanvas.endDraw();
 }
 
 void drawStrip() {
