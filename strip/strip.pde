@@ -4,21 +4,39 @@
  */
 
 PGraphics oCanvas;
-int iHalfWidth = 5;
+int iHalfWidth = 10;
+PVector myPMouse;
+int threshold = 40;
 
 void setup() {
 	size(800, 600, P3D);
 	oCanvas = createGraphics(width, height);
+	myPMouse = new PVector(mouseX, mouseY);
 }
 
 void draw() {
-    frame.setTitle(int(frameRate) + " fps");
+	frame.setTitle(int(frameRate) + " fps");
 	background(200);
 	image(oCanvas, 0, 0);
 }
 
 void mouseDragged() {
-	drawStrip();
+	if (dist(mouseX, mouseY, myPMouse.x, myPMouse.y) >= threshold) {
+		myMouseDragged();
+		myPMouse.x = mouseX;
+		myPMouse.y = mouseY;
+	}
+}
+
+void mousePressed() {
+	myPMouse.x = mouseX;
+	myPMouse.y = mouseY;
+}
+
+void myMouseDragged() {
+	if (myPMouse.x != 0 && myPMouse.y != 0) {
+		drawStrip();
+	}
 }
 
 void keyPressed() {
@@ -28,7 +46,7 @@ void keyPressed() {
 }
 
 PVector getMouseVector() {
-	return new PVector(mouseX - pmouseX, mouseY - pmouseY);
+	return new PVector(mouseX - myPMouse.x, mouseY - myPMouse.y);
 }
 
 void clearCanvas() {
@@ -42,8 +60,9 @@ void drawStrip() {
 
 	oCanvas.beginDraw();
 	oCanvas.pushMatrix();
-	oCanvas.translate(pmouseX, pmouseY);
+	oCanvas.translate(myPMouse.x, myPMouse.y);
 	oCanvas.rotate(oMouseVector.heading());
+	oCanvas.strokeCap(ROUND);
 	oCanvas.noStroke();
 	oCanvas.fill(255);
 
