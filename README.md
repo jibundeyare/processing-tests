@@ -22,6 +22,10 @@ This sketch tests the order in which mouse events atre triggered.
 
 This sketch tests the frame rate when displaying mutilple images using opengl.
 
+## perpendicular
+
+This sketch shows how to draw perpendicular vectors.
+
 ## strip
 
 This sketch tests the drawing of strip that follows the mouse.
