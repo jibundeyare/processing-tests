@@ -1,9 +1,10 @@
 /**
  * draw a vector perpendicular to another vector
  * the black vector is the original one
- * the green vector is right handed
- * the red vector is left handed
+ * the green vector is right handed and starts from the tail of the original vector
+ * the red vector is left handed and starts from the tail of the original vector
  * the blue vector is right handed and starts from the middle of the original vector
+ * the pink vector is right handed and starts from the head of the original vector
  */
 
 int x, y;
@@ -43,6 +44,12 @@ void draw() {
   a4.add(position);
   stroke(0, 0, 255);
   line(position.x, position.y, a4.x, a4.y);
+
+  // right hand perpendicular vector at vector end
+  PVector a5 = new PVector(-a.y, a.x);
+  a5.add(a);
+  stroke(255, 0, 255);
+  line(a.x, a.y, a5.x, a5.y);
 }
 
 void mouseClicked() {
