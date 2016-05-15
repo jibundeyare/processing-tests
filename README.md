@@ -1,26 +1,30 @@
 # Processing tests
 
-This contains test sketches for processing.
+This repository contains small sketches showing how things work with processing.
 
 ## draw_mouse_vector
 
-This sketch tests how to use `mouseX`, `mouseY`, `pmouseX` and `pmouseY` to draw a vector of the mouse movements.
+This sketch shows how to use `mouseX`, `mouseY`, `pmouseX` and `pmouseY` to draw a vector of the mouse movements.
 
 ## image_mask
 
-This sketch tests the mask feature of the PImage class.
+This sketch shows how to use the mask feature of the PImage class.
 
 ## inheritance
 
 This sketch shows how inheritance between a parent and a child class works.
 
+## mypmouse
+
+This sketch shows how to implement a `pmouseX` and `pmouseY` type `myPMouse` vector with a movement threshold.
+
 ## on_mouse_event
 
-This sketch tests the order in which mouse events atre triggered.
+This sketch shows the order in which mouse events atre triggered.
 
 ## opengl_images_display
 
-This sketch tests the frame rate when displaying mutilple images using opengl.
+This sketch shows how to monitor the frame rate when displaying mutilple images using opengl.
 
 ## perpendicular
 
@@ -28,9 +32,9 @@ This sketch shows how to draw perpendicular vectors.
 
 ## strip
 
-This sketch tests the drawing of strip that follows the mouse.
+This sketch shows how to draw a strip that follows the mouse.
 
 ## translate_draw_shape
 
-This sketch tests the drawing of a quad around a given coordinate using `translate()`.
+This sketch shows how to draw a quad at given coordinates using `translate()`.
 
