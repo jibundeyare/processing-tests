@@ -2,6 +2,10 @@
 
 This repository contains small sketches showing how things work with processing.
 
+## donut
+
+This sketch shows how to draw a donut shape using `beginContour()` and `endContour()`.
+
 ## draw_mouse_vector
 
 This sketch shows how to use `mouseX`, `mouseY`, `pmouseX` and `pmouseY` to draw a vector of the mouse movements.
