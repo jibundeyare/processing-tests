@@ -18,7 +18,7 @@ int iHalfWidth = 19;
 int threshold = 10;
 
 // @info when isDebugMode is set to true, only vectors that compose the strip are displayed
-boolean isDebugMode = true;
+boolean isDebugMode = false;
 
 void setup() {
   size(800, 600, P3D);
