@@ -30,6 +30,10 @@ This sketch shows the order in which mouse events atre triggered.
 
 This sketch shows how to monitor the frame rate when displaying mutilple images using opengl.
 
+## particle_image
+
+This sketch shows how to draw a particle using radial gradients.
+
 ## perpendicular
 
 This sketch shows how to draw perpendicular vectors.
