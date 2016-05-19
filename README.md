@@ -2,6 +2,8 @@
 
 This repository contains small sketches showing how things work with processing.
 
+Note that all sketches are tested and work with Processing 2.2.1.
+
 ## donut
 
 This sketch shows how to draw a donut shape using `beginContour()` and `endContour()`.
