@@ -12,6 +12,10 @@ This sketch shows how to draw a donut shape using `beginContour()` and `endConto
 
 This sketch shows how to use `mouseX`, `mouseY`, `pmouseX` and `pmouseY` to draw a vector of the mouse movements.
 
+## glow_image
+
+This sketch shows how to use `blendMode()` to get a glowing effect when displaying an image.
+
 ## image_mask
 
 This sketch shows how to use the mask feature of the PImage class.
