@@ -3,6 +3,7 @@ PImage particle;
 int resize = 4;
 
 void setup() {
+  // renderer must be set to P2D or P3D
   size(800, 600, P2D);
 
   blendMode(ADD);
