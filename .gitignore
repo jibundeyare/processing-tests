@@ -1,0 +1,15 @@
+# vim
+*.swp
+*.swo
+*.vim
+
+# processing
+sketch.properties
+
+# data
+/image_mask/data/*.jpg
+/opengl_images_display/data/*.jpg
+/particle_image/data/*.png
+/glow_image/data/*.png
+/glow_pgraphics/data/*.png
+
