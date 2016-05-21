@@ -11,5 +11,6 @@ sketch.properties
 /opengl_images_display/data/*.jpg
 /particle_image/data/*.png
 /glow_image/data/*.png
+/glow_blend/data/*.png
 /glow_pgraphics/data/*.png
 

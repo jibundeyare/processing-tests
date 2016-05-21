@@ -14,7 +14,11 @@ This sketch shows how to use `mouseX`, `mouseY`, `pmouseX` and `pmouseY` to draw
 
 ## glow_image
 
-This sketch shows how to use `blendMode()` to get a glowing effect when displaying an image.
+This sketch shows how to use `blendMode()` and `image()` to get a glowing effect with an image.
+
+## glow_image
+
+This sketch shows how to use `blend()` to get a glowing effect with an image.
 
 ## image_mask
 
