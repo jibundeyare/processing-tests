@@ -7,10 +7,11 @@
 sketch.properties
 
 # data
+/glow_blend/data/*.png
+/glow_image/data/*.png
+/glow_pgraphics/data/*.png
 /image_mask/data/*.jpg
 /opengl_images_display/data/*.jpg
 /particle_image/data/*.png
-/glow_image/data/*.png
-/glow_blend/data/*.png
-/glow_pgraphics/data/*.png
+/svg_export/data/*.svg
 

@@ -57,6 +57,10 @@ This sketch shows how to draw perpendicular vectors.
 
 This sketch shows how to draw a strip that follows the mouse.
 
+## svg_export
+
+This sketch shows how to export sketch elements as an svg document.
+
 ## translate_draw_shape
 
 This sketch shows how to draw a quad at given coordinates using `translate()`.
